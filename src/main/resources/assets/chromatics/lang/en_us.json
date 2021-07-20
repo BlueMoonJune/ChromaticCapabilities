@@ -1,0 +1,14 @@
+{
+
+    "item.chromatics.test_item": ">Test Item<",
+    "item.chromatics.testier_item": ">Testier Item<",
+    "item.chromatics.radiant_drill": "Radiant Drill",
+    "item.chromatics.radiant_jackhammer": "Radiant Jackhammer",
+
+    "tooltip.chromatics.shift_info": "§8Press [§7Shift§8] for more info",
+    "tooltip.chromatics.radiant_drill": "§5\n A powerful drill for excavating large \namounts of dirt. Can be powered \nwith air pressure from a \nCopper §dBacktank\n\n§77When L-Clicked\n §5Starts§d mining, §5increasng §defficency§5\n over time\n§7While wearing Copper Backtank\n §dNo Durability §5will be used. Instead, §d Air\n pressure §5 is drained from the tank",
+
+    "block.chromatics.test_block": ">Test Block<",
+
+    "tile.chromatics.test_block": ">Test Block<"
+}
