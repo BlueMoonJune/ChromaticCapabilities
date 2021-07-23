@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
 
     "item.chromatics.test_item": ">Test Item<",
     "item.chromatics.testier_item": ">Testier Item<",
@@ -12,7 +11,5 @@
     "block.chromatics.test_block": ">Test Block<",
 
     "tile.chromatics.test_block": ">Test Block<"
-=======
-    "item.chromatics.test_item": ">Test Item<"
->>>>>>> b2d355ab770aca53f147cd08ca8bc28471520320
+
 }

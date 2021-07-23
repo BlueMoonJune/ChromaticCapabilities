@@ -1,15 +1,11 @@
 package com.ovionyx.chromatics.common.items;
 
-import com.mojang.datafixers.types.templates.List;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.widget.button.Button;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.client.util.InputMappings;
 import net.minecraft.entity.EntityType;
-import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.passive.BatEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.projectile.FireballEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.EffectInstance;
