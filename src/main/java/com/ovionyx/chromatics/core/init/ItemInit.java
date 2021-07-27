@@ -26,6 +26,6 @@ public class ItemInit {
     public static final RegistryObject<RadiantJackhammer> RADIANT_JACKHAMMER = ITEMS.register("radiant_jackhammer", () -> new RadiantJackhammer(ToolMaterialList.jackhammer, 0, 1.5f, new Item.Properties().addToolType(ToolType.PICKAXE,5).tab(ItemGroup.TAB_TOOLS).stacksTo(1)));
 
     //Block Items
-    public static final RegistryObject<BlockItem> TEST_BLOCK = ITEMS.register("test_block", () -> new BlockItem(BlockInit.TEST_BLOCK.get(), new Item.Properties().tab(ItemGroup.TAB_MISC)));
+    public static final RegistryObject<BlockItem> CHROMATIC_CASING = ITEMS.register("chromatic_casing", () -> new BlockItem(BlockInit.CHROMATIC_CASING.get(), new Item.Properties().tab(ItemGroup.TAB_BUILDING_BLOCKS)));
 
 }

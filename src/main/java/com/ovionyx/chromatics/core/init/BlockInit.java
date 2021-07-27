@@ -18,7 +18,7 @@ public class BlockInit {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS,
             Chromatics.MODID);
 
-    public static final RegistryObject<Block> TEST_BLOCK = BLOCKS.register("test_block",
+    public static final RegistryObject<Block> CHROMATIC_CASING = BLOCKS.register("chromatic_casing",
             () -> new Block(AbstractBlock.Properties.of(Material.STONE, MaterialColor.TERRACOTTA_YELLOW)
                     .strength(15f)
                     .harvestTool(ToolType.PICKAXE)

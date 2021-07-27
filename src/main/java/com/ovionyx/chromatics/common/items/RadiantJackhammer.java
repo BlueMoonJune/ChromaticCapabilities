@@ -31,7 +31,6 @@ public class RadiantJackhammer extends PickaxeItem {
         int x = rand.nextInt(3)-1;
         int y = rand.nextInt(3)-1;
         int z = rand.nextInt(3)-1;
-        wait((long) 0.1);
         BlockPos newpos = new BlockPos(pos.getX() + x,pos.getY() + y,pos.getZ() + z);
 
         if (world.getBlockState(newpos).getDestroySpeed(world, newpos) > -1) {
