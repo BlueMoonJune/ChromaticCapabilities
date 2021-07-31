@@ -1,5 +1,6 @@
 package com.ovionyx.chromatics.common.items;
 
+import com.simibubi.create.content.curiosities.armor.BackTankUtil;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.util.ITooltipFlag;
@@ -20,6 +21,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import org.lwjgl.glfw.GLFW;
 
 import javax.annotation.Nullable;
+import java.util.function.Consumer;
 
 public class RadiantDrill extends ShovelItem {
 
@@ -56,7 +58,7 @@ public class RadiantDrill extends ShovelItem {
     public boolean mineBlock(ItemStack item, World world, BlockState block, BlockPos pos, LivingEntity player) {
         if (!item.hasTag()) { item.setTag(new CompoundNBT()); }
         CompoundNBT nbt = item.getTag();
-        if (nbt.getFloat("DrillSpeed") < 18) {
+        if (nbt.getFloat("DrillSpeed") < 20) {
             nbt.putFloat("DrillSpeed", nbt.getFloat("DrillSpeed") + 2f);
         }
         return super.mineBlock(item, world, block, pos, player);
@@ -66,10 +68,22 @@ public class RadiantDrill extends ShovelItem {
     public float getDestroySpeed(ItemStack item, BlockState block) {
         if (!item.hasTag()) { item.setTag(new CompoundNBT()); }
         CompoundNBT nbt = item.getTag();
-        if (canHarvestBlock(item, block)) {
+        if (item.isCorrectToolForDrops(block)) {
             return nbt.getFloat("DrillSpeed");
         } else {
             return 1;
         }
+    }
+
+    @Override
+    public <T extends LivingEntity> int damageItem(ItemStack stack, int amount, T entity, Consumer<T> onBroken) {
+        ItemStack tank = BackTankUtil.get(entity);
+        if (BackTankUtil.canAbsorbDamage(entity, amount)) {
+            float air = BackTankUtil.getAir(tank);
+            float maxAir = BackTankUtil.maxAir(tank);
+            tank.getOrCreateTag().putFloat("Air",air+maxAir-amount);
+            amount = 0;
+        }
+        return super.damageItem(stack, amount, entity, onBroken);
     }
 }

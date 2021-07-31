@@ -1,5 +1,6 @@
 package com.ovionyx.chromatics.common.items;
 
+import com.simibubi.create.content.curiosities.armor.BackTankUtil;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.util.ITooltipFlag;
@@ -17,6 +18,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import org.lwjgl.glfw.GLFW;
 import java.util.Random;
+import java.util.function.Consumer;
 
 import javax.annotation.Nullable;
 
@@ -55,5 +57,17 @@ public class RadiantJackhammer extends PickaxeItem {
             MineRandomBlock(world, entity, MineRandomBlock(world, entity, MineRandomBlock(world, entity, MineRandomBlock(world, entity, pos))));
         }
         return super.mineBlock(stack, world, block, pos, entity);
+    }
+
+    @Override
+    public <T extends LivingEntity> int damageItem(ItemStack stack, int amount, T entity, Consumer<T> onBroken) {
+        ItemStack tank = BackTankUtil.get(entity);
+        if (BackTankUtil.canAbsorbDamage(entity, amount)) {
+            float air = BackTankUtil.getAir(tank);
+            float maxAir = BackTankUtil.maxAir(tank);
+            tank.getOrCreateTag().putFloat("Air",air+maxAir-amount);
+            amount = 0;
+        }
+        return super.damageItem(stack, amount, entity, onBroken);
     }
 }
