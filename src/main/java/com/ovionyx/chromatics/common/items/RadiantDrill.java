@@ -1,18 +1,23 @@
 package com.ovionyx.chromatics.common.items;
 
+import com.ovionyx.chromatics.lists.ToolMaterialList;
 import com.simibubi.create.content.curiosities.armor.BackTankUtil;
+import com.simibubi.create.foundation.utility.VecHelper;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.client.util.InputMappings;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ShovelItem;
 import net.minecraft.item.UseAction;
 import net.minecraft.nbt.CompoundNBT;
+import net.minecraft.particles.ParticleTypes;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.World;
@@ -27,8 +32,8 @@ public class RadiantDrill extends ShovelItem {
 
     float digSpeed;
 
-    public RadiantDrill(IItemTier ToolMaterial, float attackOffset, float attackSpeed, Properties properties) {
-        super(ToolMaterial, attackOffset, attackSpeed, properties);
+    public RadiantDrill(IItemTier p_i48469_1_, float p_i48469_2_, float p_i48469_3_, Properties p_i48469_4_) {
+        super(p_i48469_1_, p_i48469_2_, p_i48469_3_, p_i48469_4_);
     }
 
     @java.lang.Override
@@ -85,5 +90,24 @@ public class RadiantDrill extends ShovelItem {
             amount = 0;
         }
         return super.damageItem(stack, amount, entity, onBroken);
+    }
+
+    @Override
+    public boolean onEntityItemUpdate(ItemStack stack, ItemEntity entity) {
+
+        Vector3d basemotion;
+
+        entity.lifespan = 6000;
+
+        World world = entity.level;
+        Vector3d positionVec = entity.position();
+
+        entity.setNoGravity(true);
+
+        if (world.random.nextFloat() < 5) {
+            basemotion = VecHelper.offsetRandomly(positionVec, world.random, 0.5F);
+            world.addParticle(ParticleTypes.END_ROD, basemotion.x, positionVec.y, basemotion.z, 0.0D, -0.10000000149011612D, 0.0D);
+        }
+        return false;
     }
 }

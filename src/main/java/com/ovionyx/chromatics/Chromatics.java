@@ -1,9 +1,11 @@
 package com.ovionyx.chromatics;
 
-import com.ovionyx.chromatics.core.init.BlockInit;
-import com.ovionyx.chromatics.core.init.ItemInit;
+import com.simibubi.create.foundation.data.CreateRegistrate;
+import com.simibubi.create.repack.registrate.util.NonNullLazyValue;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -29,6 +31,21 @@ public class Chromatics
     public static final Logger LOGGER = LogManager.getLogger();
     public static final String MODID = "chromatics";
 
+    public static class ChromaticsItemGroup extends ItemGroup {
+
+        public ChromaticsItemGroup() {
+            super("chromatics");
+        }
+
+        @Override
+        public ItemStack makeIcon() {
+            return AllBlocks.CHROMATIC_CASING.asStack();
+        }
+    }
+
+
+    public static final ChromaticsItemGroup BASE_CREATIVE_TAB = new ChromaticsItemGroup();
+
     public Chromatics() {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
         bus.addListener(this::setup);
@@ -39,8 +56,8 @@ public class Chromatics
         // Register the doClientStuff method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
 
-        ItemInit.ITEMS.register(bus);
-        BlockInit.BLOCKS.register(bus);
+        AllItems.register();
+        AllBlocks.register();
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
@@ -87,5 +104,10 @@ public class Chromatics
             // register a new blocks here
             LOGGER.info("HELLO from Register Block");
         }
+    }
+
+    private static final NonNullLazyValue<CreateRegistrate> REGISTRATE = CreateRegistrate.lazy("chromatics");
+    public static CreateRegistrate registrate() {
+        return REGISTRATE.get();
     }
 }

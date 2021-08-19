@@ -9,7 +9,8 @@ public enum ToolMaterialList implements IItemTier
 {
     jackhammer(3.0f,12.0f,2571,5,17,AllItems.REFINED_RADIANCE.get()),
     drill(3.0f,3.0f,2571,5,17,AllItems.REFINED_RADIANCE.get()),
-    chainsaw(3.0f,12f,2671,5,17,AllItems.REFINED_RADIANCE.get());
+    chainsaw(3.0f,12f,2671,5,17,AllItems.REFINED_RADIANCE.get()),
+    rapier(10.0f,2f,2671,5,17,AllItems.REFINED_RADIANCE.get());
 
     private float attackDamage, efficency;
     private int durability, harvestLevel, enchantmentValue;

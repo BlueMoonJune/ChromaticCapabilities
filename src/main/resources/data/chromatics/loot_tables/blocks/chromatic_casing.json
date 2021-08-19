@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "chromatics:test_block"
+          "name": "chromatics:chromatic_casing"
         }
       ]
     }

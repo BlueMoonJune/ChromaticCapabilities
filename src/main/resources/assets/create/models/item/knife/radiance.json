@@ -1,0 +1,53 @@
+{
+	"credit": "Made with Blockbench",
+	"texture_size": [32, 32],
+	"textures": {
+		"7": "chromatics:items/radiant_knife"
+	},
+	"elements": [
+		{
+			"name": "radiance",
+			"from": [7.5, 5.5, 6.5],
+			"to": [8.5, 6.5, 9.5],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 1, 8]},
+			"faces": {
+				"north": {"uv": [6.5, 1.5, 7, 2], "texture": "#7"},
+				"east": {"uv": [5, 1.5, 6.5, 2], "texture": "#7"},
+				"south": {"uv": [8.5, 1.5, 9, 2], "texture": "#7"},
+				"west": {"uv": [7, 1.5, 8.5, 2], "texture": "#7"},
+				"up": {"uv": [7, 1.5, 6.5, 0], "texture": "#7"},
+				"down": {"uv": [7.5, 0, 7, 1.5], "texture": "#7"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"translation": [0, 4.25, 2]
+		},
+		"thirdperson_lefthand": {
+			"translation": [0, 4.25, 2]
+		},
+		"firstperson_righthand": {
+			"rotation": [6, 8, -9.25],
+			"translation": [1.5, 3.25, 0]
+		},
+		"firstperson_lefthand": {
+			"rotation": [6, 8, -9.25],
+			"translation": [1.5, 3.25, 0]
+		},
+		"ground": {
+			"rotation": [50, 29, 0],
+			"translation": [0, 5.5, 0]
+		},
+		"gui": {
+			"rotation": [90, 45, -90]
+		},
+		"head": {
+			"rotation": [-104, 0, 52],
+			"translation": [7.25, 2, 1.5]
+		},
+		"fixed": {
+			"rotation": [-90, 45, 90]
+		}
+	}
+}
