@@ -5,8 +5,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.crafting.Ingredient;
 import com.simibubi.create.AllItems;
 
-public enum ToolMaterialList implements IItemTier
-{
+public enum ToolMaterialList implements IItemTier {
     jackhammer(3.0f,12.0f,2571,5,17,AllItems.REFINED_RADIANCE.get()),
     drill(3.0f,3.0f,2571,5,17,AllItems.REFINED_RADIANCE.get()),
     chainsaw(3.0f,12f,2671,5,17,AllItems.REFINED_RADIANCE.get()),
