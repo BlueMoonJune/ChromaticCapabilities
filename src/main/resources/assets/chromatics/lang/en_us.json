@@ -2,13 +2,15 @@
 
     "item.chromatics.test_item": ">Test Item<",
     "item.chromatics.testier_item": ">Testier Item<",
+	
     "item.chromatics.radiant_drill": "Radiant Drill",
     "item.chromatics.radiant_drill.tooltip": "RADIANT DRILL",
+	
     "item.chromatics.radiant_drill.tooltip.summary": "A powerful drill for excavating large _amounts of dirt_. Can be powered with Air Pressure from a _Copper Backtank_.",
     "item.chromatics.radiant_drill.tooltip.condition1": "When L-Clicked",
     "item.chromatics.radiant_drill.tooltip.behaviour1": "Starts mining, increasing _efficiency_ over time.",
-	"item.chromatics.radiant_drill.tooltip.condition2": "While wearing Copper Backtank",
-	"item.chromatics.radiant_drill.tooltip.behaviour2": "_No_ _Durability_ will be used. Instead, _Air_ _pressure_ is drained from the Tank",
+    "item.chromatics.radiant_drill.tooltip.condition2": "While wearing Copper Backtank",
+    "item.chromatics.radiant_drill.tooltip.behaviour2": "_No_ _Durability_ will be used. Instead, _Air_ _pressure_ is drained from the Tank",
     
     "item.chromatics.radiant_jackhammer": "Radiant Jackhammer",
     "item.chromatics.radiant_chainsaw": "Radiant Chainsaw",
@@ -19,6 +21,9 @@
     "item.chromatics.shadow_steel_chestplate": "Shadow Steel Chestplate",
     "item.chromatics.shadow_steel_helmet": "Shadow Steel Helmet",
     "item.chromatics.shadow_steel_leggings": "Shadow Steel Leggings",
+	
+    "item.chromatics.shadow_steel_boots.tooltip": "SHADOW STEEL BOOTS",
+    "item.chromatics.shadow_steel_boots.tooltip.summary": "A durable armor blessed by _the void_, Full set can make you _levitate_ when you fall into the void by accident.",
    
     "block.chromatics.chromatic_casing": "Chromatic Casing",
 
