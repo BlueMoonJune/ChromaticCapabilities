@@ -33,6 +33,6 @@ public class AllItems {
 
     public static final ItemEntry<ShadowArmor> SHADOW_STEEL_BOOTS = REGISTRATE.item("shadow_steel_boots", p ->new ShadowArmor(ShadowArmorMaterial.SHADOWSTEEL, EquipmentSlotType.FEET, new Item.Properties().rarity(Rarity.RARE))).register();
     public static final ItemEntry<ShadowArmor> SHADOW_STEEL_LEGGINGS = REGISTRATE.item("shadow_steel_leggings", p ->new ShadowArmor(ShadowArmorMaterial.SHADOWSTEEL, EquipmentSlotType.LEGS, new Item.Properties().rarity(Rarity.RARE))).register();
-    public static final ItemEntry<ShadowChestplate> SHADOW_STEEL_CHESTPLATE = REGISTRATE.item("shadow_steel_chestplate", p ->new ShadowChestplate(ShadowArmorMaterial.SHADOWSTEEL, EquipmentSlotType.CHEST, new Item.Properties().rarity(Rarity.RARE))).register();
+    public static final ItemEntry<ShadowArmor> SHADOW_STEEL_CHESTPLATE = REGISTRATE.item("shadow_steel_chestplate", p ->new ShadowChestplate(ShadowArmorMaterial.SHADOWSTEEL, EquipmentSlotType.CHEST, new Item.Properties().rarity(Rarity.RARE))).register();
     public static final ItemEntry<ShadowArmor> SHADOW_STEEL_HELMET = REGISTRATE.item("shadow_steel_helmet", p ->new ShadowArmor(ShadowArmorMaterial.SHADOWSTEEL, EquipmentSlotType.HEAD, new Item.Properties().rarity(Rarity.RARE))).register();
 }
