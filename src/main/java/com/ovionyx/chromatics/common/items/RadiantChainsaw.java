@@ -39,20 +39,19 @@ import java.util.function.Consumer;
 import static java.lang.Math.max;
 
 public class RadiantChainsaw extends AxeItem {
+    private static final MAX_USES = 2000; // Chnage this to the value you want or just make a new config file I guess
     private static boolean deforesting = false;
 
     public RadiantChainsaw(IItemTier p_i48530_1_, float p_i48530_2_, float p_i48530_3_, Properties p_i48530_4_) {
         super(p_i48530_1_, p_i48530_2_, p_i48530_3_, p_i48530_4_);
     }
 
-    @java.lang.Override
-    @OnlyIn(Dist.CLIENT)
-    public void appendHoverText(ItemStack stack, @Nullable World worldIn, java.util.List<ITextComponent> tooltip, ITooltipFlag flagIn) {
-        super.appendHoverText(stack, worldIn, tooltip, flagIn);
-        tooltip.add(new TranslationTextComponent("tooltip.chromatics.shift_info"));
-        if(InputMappings.isKeyDown(Minecraft.getInstance().getWindow().getWindow(), GLFW.GLFW_KEY_LEFT_SHIFT)) {
-            tooltip.add(new TranslationTextComponent("tooltip.chromatics.radiant_chainsaw"));
+    @Override
+    public <T extends LivingEntity> int damageItem(ItemStack stack, int amount, T entity, Consumer<T> onBroken) {
+        if (BackTankUtil.canAbsorbDamage(entity, MAX_USES / amount)) {
+            amount = 0;
         }
+        return super.damageItem(stack, amount, entity, onBroken);
     }
 
     @Override
