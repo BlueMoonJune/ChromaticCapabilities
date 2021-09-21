@@ -1,4 +1,4 @@
-package overshadowed.events;
+package com.ovionyx.chromatics.events;
 
 import com.simibubi.create.content.contraptions.base.IRotate;
 import com.simibubi.create.content.contraptions.components.flywheel.engine.EngineBlock;
@@ -13,16 +13,16 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import overshadowed.Overshadowed;
+import com.ovionyx.chromatics.Chromatics;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Mod.EventBusSubscriber(modid = Overshadowed.MOD_ID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.FORGE)
+@Mod.EventBusSubscriber(modid = Chromatics.MOD_ID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class ClientEvents {
 
-    private static final String itemPrefix = "item." + Overshadowed.MOD_ID;
-    private static final String blockPrefix = "block." + Overshadowed.MOD_ID;
+    private static final String itemPrefix = "item." + Chromatics.MOD_ID;
+    private static final String blockPrefix = "block." + Chromatics.MOD_ID;
 
     /*
     Stole from Create since the tooltip system was hardcoded and only works when your mod ID starts with "Create",
