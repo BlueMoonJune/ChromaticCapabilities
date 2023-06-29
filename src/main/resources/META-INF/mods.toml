@@ -1,33 +1,33 @@
 modLoader="javafml"
-loaderVersion="[36,)"
+loaderVersion="[40,)"
 license="All rights reserved"
 [[mods]]
 modId="chromatics"
 version="${file.jarVersion}"
 displayName="Chromatic Capabilities"
-logoFile="chromatic_capabilities.png"
+logoFile="chromatics.png"
 credits="Thanks to Gorp for a base mod!"
 authors="Ovionyx"
 description='''
-Chromatic Capabilities is a mod that hopes to bring back the use of Create\'s Chromatic Compound and its variants
+Chromatic Capabilities is a mod that hopes to bring back the use of Create\'s Chromatic Compound and its variants.
 Github: https://github.com/Ovionyx/ChromaticCapabilities
 Discord: https://discord.gg/fKWWATy3uW
 '''
 [[dependencies.chromatics]]
     modId="forge"
     mandatory=true
-    versionRange="[36,)"
+    versionRange="[40,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.chromatics]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.16.5,1.17)"
+    versionRange="[1.18.2,1.19)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.chromatics]]
     modId="create"
     mandatory=true
-    versionRange="[v0.3.2a,)"
-    ordering="AFTER"
+    versionRange="[0.5.1.a,)"
+    ordering="NONE"
     side="BOTH"

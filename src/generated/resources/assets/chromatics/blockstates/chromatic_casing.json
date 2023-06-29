@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "chromatics:block/chromatic_casing"
+    }
+  }
+}
