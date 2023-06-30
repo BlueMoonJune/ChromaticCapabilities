@@ -38,7 +38,7 @@ import java.util.stream.Collectors;
 @Mod(Chromatics.MODID)
 public class Chromatics
 {
-    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogUtils.getLogger();
     public static final String MODID = "chromatics";
     public static final CreateRegistrate registrate = CreateRegistrate.create(MODID);
     public static final CreativeModeTab itemGroup = new CreativeModeTab(MODID) {

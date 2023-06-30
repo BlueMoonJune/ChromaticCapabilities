@@ -4,6 +4,8 @@
   "package": "com.ovionyx.chromatics.foundation.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "ChromaticsCompoundItemTabMixin",
+    "ChromaticsDohickyItemTabMixin"
   ],
   "client": [
   ]
