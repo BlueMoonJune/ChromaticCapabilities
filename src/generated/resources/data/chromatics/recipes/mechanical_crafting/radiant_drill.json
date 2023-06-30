@@ -1,0 +1,25 @@
+{
+  "type": "create:mechanical_crafting",
+  "pattern": [
+    "  S   ",
+    "SCSPSR"
+  ],
+  "key": {
+    "P": {
+      "item": "create:cogwheel"
+    },
+    "S": {
+      "item": "create:shadow_steel"
+    },
+    "R": {
+      "item": "create:refined_radiance"
+    },
+    "C": {
+      "item": "chromatics:refined_radiance_casing"
+    }
+  },
+  "result": {
+    "item": "chromatics:radiant_drill"
+  },
+  "acceptMirrored": true
+}

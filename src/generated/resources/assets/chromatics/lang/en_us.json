@@ -3,6 +3,8 @@
 	"_": "->------------------------]  Game Elements  [------------------------<-",
 
 	"block.chromatics.chromatic_casing": "Chromatic Casing",
+	"block.chromatics.refined_radiance_casing": "Radiant Casing",
+	"block.chromatics.shadow_steel_casing": "Shadow Casing",
 
 	"item.chromatics.radiant_chainsaw": "Radiant Chainsaw",
 	"item.chromatics.radiant_drill": "Radiant Drill",

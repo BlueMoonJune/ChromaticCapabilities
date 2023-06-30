@@ -1,6 +1,7 @@
 package com.ovionyx.chromatics.foundation.data.recipe;
 
 import com.ovionyx.chromatics.Chromatics;
+import com.ovionyx.chromatics.init.AllBlocks;
 import com.simibubi.create.AllItems;
 import com.simibubi.create.AllTags;
 import com.simibubi.create.foundation.data.recipe.ProcessingRecipeGen;
@@ -42,11 +43,17 @@ public abstract class ChromaticsRecipeProvider extends RecipeProvider {
     protected static class Marker {
     }
     protected static class M {
-        static ItemLike refinedRadiance() {
+        public static ItemLike refinedRadiance() {
             return AllItems.REFINED_RADIANCE.get();
         }
-        static ItemLike shadowSteel () {
+        public static ItemLike shadowSteel() {
             return AllItems.SHADOW_STEEL.get();
+        }
+        public static ItemLike chromaticCompound() {
+            return AllItems.CHROMATIC_COMPOUND.get();
+        }
+        public static ItemLike radiantCasing() {
+            return AllBlocks.REFINED_RADIANCE_CASING.get();
         }
 
     }

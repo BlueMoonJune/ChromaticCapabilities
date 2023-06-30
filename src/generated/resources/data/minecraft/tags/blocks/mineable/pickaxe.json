@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
-    "chromatics:chromatic_casing"
+    "chromatics:chromatic_casing",
+    "chromatics:refined_radiance_casing",
+    "chromatics:shadow_steel_casing"
   ]
 }

@@ -3,10 +3,13 @@ package com.ovionyx.chromatics;
 import com.mojang.logging.LogUtils;
 import com.ovionyx.chromatics.foundation.config.Common;
 import com.ovionyx.chromatics.foundation.data.AllLangPartials;
+import com.ovionyx.chromatics.foundation.data.recipe.ChromaticsProcessingRecipeGen;
+import com.ovionyx.chromatics.foundation.data.recipe.gen.MechanicalCrafting;
 import com.ovionyx.chromatics.init.AllBlocks;
 import com.ovionyx.chromatics.init.AllItems;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.simibubi.create.foundation.data.LangMerger;
+import com.simibubi.create.foundation.data.recipe.MechanicalCraftingRecipeGen;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
@@ -65,6 +68,10 @@ public class Chromatics
         DataGenerator gen = event.getGenerator();
         if (event.includeClient()) {
             gen.addProvider(new LangMerger(gen, MODID, "Chromatic Capabilities", AllLangPartials.values()));
+        }
+        if (event.includeServer()) {
+            ChromaticsProcessingRecipeGen.registerAll(gen);
+            gen.addProvider(new MechanicalCrafting(gen));
         }
     }
     private void setup(final FMLCommonSetupEvent event)
