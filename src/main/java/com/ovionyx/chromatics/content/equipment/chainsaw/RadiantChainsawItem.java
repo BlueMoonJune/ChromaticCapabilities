@@ -1,5 +1,6 @@
 package com.ovionyx.chromatics.content.equipment.chainsaw;
 
+import com.ovionyx.chromatics.content.equipment.ToolTiers;
 import com.ovionyx.chromatics.foundation.config.Common;
 import com.ovionyx.chromatics.init.AllItems;
 import com.simibubi.create.AllTags;
@@ -16,7 +17,6 @@ import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Tier;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
@@ -34,8 +34,8 @@ import java.util.function.Consumer;
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class RadiantChainsawItem extends AxeItem {
     private static boolean deforesting = false; // required as to not run into "recursions" over forge events on tree cutting
-    public RadiantChainsawItem(Tier tier, int p_i48460_2_, float p_i48460_3_, Properties properties) {
-        super(tier, p_i48460_2_, p_i48460_3_, properties);
+    public RadiantChainsawItem(Properties properties) {
+        super(ToolTiers.rChainsaw, 0, 1.5f, properties);
     }
 
     // Moved away from Item#onBlockDestroyed as it does not get called in Creative

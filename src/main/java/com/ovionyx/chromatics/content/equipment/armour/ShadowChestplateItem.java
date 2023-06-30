@@ -11,8 +11,8 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 
 public class ShadowChestplateItem extends ShadowArmorItem {
-    public ShadowChestplateItem(ArmorMaterial material, EquipmentSlot slot, Properties properties) {
-        super(material, slot, properties);
+    public ShadowChestplateItem(EquipmentSlot slot, Properties properties) {
+        super(slot, properties);
     }
     @Override
     public void inventoryTick(ItemStack stack, Level world, Entity entity, int p_77663_4_, boolean p_77663_5_) {

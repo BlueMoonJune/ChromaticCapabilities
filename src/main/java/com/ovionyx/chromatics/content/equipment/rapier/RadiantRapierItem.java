@@ -1,5 +1,6 @@
 package com.ovionyx.chromatics.content.equipment.rapier;
 
+import com.ovionyx.chromatics.content.equipment.ToolTiers;
 import com.ovionyx.chromatics.foundation.config.Common;
 import com.ovionyx.chromatics.init.AllItems;
 import com.simibubi.create.content.equipment.armor.BacktankUtil;
@@ -15,7 +16,6 @@ import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Tier;
 import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
@@ -36,8 +36,8 @@ import static java.lang.Math.*;
 
 public class RadiantRapierItem extends AxeItem {
 
-    public RadiantRapierItem(Tier tier, int p_i48460_2_, float p_i48460_3_, Properties properties) {
-        super(tier, p_i48460_2_, p_i48460_3_, properties);
+    public RadiantRapierItem(Properties properties) {
+        super(ToolTiers.rRapier, 0, 1.5f, properties);
     }
     @Override
     public boolean hurtEnemy(ItemStack stack, LivingEntity player, LivingEntity enemy) {

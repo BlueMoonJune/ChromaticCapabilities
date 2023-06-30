@@ -13,8 +13,8 @@ import net.minecraft.world.phys.Vec3;
 
 public class ShadowArmorItem extends ArmorItem {
 
-    public ShadowArmorItem(ArmorMaterial material, EquipmentSlot slot, Properties properties) {
-        super(material, slot, properties);
+    public ShadowArmorItem(EquipmentSlot slot, Properties properties) {
+        super(ShadowMaterial.SHADOWSTEEL, slot, properties);
     }
 
     @Override
