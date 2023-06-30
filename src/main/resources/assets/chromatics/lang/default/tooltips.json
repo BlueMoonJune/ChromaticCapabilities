@@ -1,0 +1,38 @@
+{
+  "item.chromatics.radiant_chainsaw.tooltip": "RADIANT CHAINSAW",
+  "item.chromatics.radiant_chainsaw.tooltip.summary": "A powerful tool useful for clearing large areas of trees. Can be powered with _Air_ _Pressure_ from a _Backtank_",
+  "item.chromatics.radiant_chainsaw.tooltip.condition1": "When Breaking Trees",
+  "item.chromatics.radiant_chainsaw.tooltip.behaviour1": "Breaks the entire tree and damages the tool based on the size of the tree",
+  "item.chromatics.radiant_chainsaw.tooltip.condition2": "While wearing Backtank",
+  "item.chromatics.radiant_chainsaw.tooltip.behaviour2": "_No_ _Durability_ will be used. Instead, _Air_ _pressure_ is drained from the Tank",
+
+  "item.chromatics.radiant_drill.tooltip": "RADIANT DRILL",
+  "item.chromatics.radiant_drill.tooltip.summary": "A powerful tool useful for excavating dirt with ease. Can be powered with _Air_ _Pressure_ from a _Backtank_",
+  "item.chromatics.radiant_drill.tooltip.condition1": "When Breaking Blocks",
+  "item.chromatics.radiant_drill.tooltip.behaviour1": "Gradually increases mining speed the longer you are mining blocks",
+  "item.chromatics.radiant_drill.tooltip.condition2": "While wearing Backtank",
+  "item.chromatics.radiant_drill.tooltip.behaviour2": "_No_ _Durability_ will be used. Instead, _Air_ _pressure_ is drained from the Tank",
+
+  "item.chromatics.radiant_jackhammer.tooltip": "RADIANT JACKHAMMER",
+  "item.chromatics.radiant_jackhammer.tooltip.summary": "A powerful tool useful for excavating large patches of minerals. Can be powered with _Air_ _Pressure_ from a _Backtank_",
+  "item.chromatics.radiant_jackhammer.tooltip.condition1": "When Breaking Blocks",
+  "item.chromatics.radiant_jackhammer.tooltip.behaviour1": "Breaks blocks randomly in a radius area around the block you are breaking",
+  "item.chromatics.radiant_jackhammer.tooltip.condition2": "While wearing Backtank",
+  "item.chromatics.radiant_jackhammer.tooltip.behaviour2": "_No_ _Durability_ will be used. Instead, _Air_ _pressure_ is drained from the Tank",
+
+  "item.chromatics.radiant_knife.tooltip": "RADIANT KNIFE",
+  "item.chromatics.radiant_knife.tooltip.summary": "A strong blade useful for cutting through enemies. Can be powered with _Air_ _Pressure_ from a _Backtank_",
+  "item.chromatics.radiant_knife.tooltip.condition1": "When Dropped Near A Light Source",
+  "item.chromatics.radiant_knife.tooltip.behaviour1": "Repairs the tool and consumes the _Light_ _Source_",
+  "item.chromatics.radiant_knife.tooltip.condition2": "While wearing Backtank",
+  "item.chromatics.radiant_knife.tooltip.behaviour2": "_No_ _Durability_ will be used. Instead, _Air_ _pressure_ is drained from the Tank",
+
+  "item.chromatics.radiant_rapier.tooltip": "RADIANT RAPIER",
+  "item.chromatics.radiant_rapier.tooltip.summary": "A strong blade useful for cutting through enemies. Can be powered with _Air_ _Pressure_ from a _Backtank_",
+  "item.chromatics.radiant_rapier.tooltip.condition1": "When Attacking Enemies",
+  "item.chromatics.radiant_rapier.tooltip.behaviour1": "The _Range_ of the tools reach is increased",
+  "item.chromatics.radiant_rapier.tooltip.condition2": "When Dropped Near A Light Source",
+  "item.chromatics.radiant_rapier.tooltip.behaviour2": "Repairs the tool and consumes the _Light_ _Source_",
+  "item.chromatics.radiant_rapier.tooltip.condition3": "While wearing Backtank",
+  "item.chromatics.radiant_rapier.tooltip.behaviour3": "_No_ _Durability_ will be used. Instead, _Air_ _pressure_ is drained from the Tank"
+}
