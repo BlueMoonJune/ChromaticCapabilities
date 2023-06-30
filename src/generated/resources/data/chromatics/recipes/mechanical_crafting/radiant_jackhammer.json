@@ -2,12 +2,15 @@
   "type": "create:mechanical_crafting",
   "pattern": [
     "SCS",
-    "CSC",
+    "PSP",
     " S ",
     " R ",
     " R "
   ],
   "key": {
+    "P": {
+      "item": "create:cogwheel"
+    },
     "S": {
       "item": "create:shadow_steel"
     },

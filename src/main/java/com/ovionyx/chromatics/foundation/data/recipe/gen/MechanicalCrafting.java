@@ -38,11 +38,12 @@ public class MechanicalCrafting extends ChromaticsRecipeProvider {
                     ),
             JACKHAMMER = create(AllItems.JACKHAMMER::get).returns(1)
                     .recipe(b -> b
+                            .key('P', Ingredient.of(AllBlocks.COGWHEEL.get()))
                             .key('S', Ingredient.of(M.shadowSteel()))
                             .key('R', Ingredient.of(M.refinedRadiance()))
                             .key('C', Ingredient.of(M.radiantCasing()))
                             .patternLine("SCS")
-                            .patternLine("CSC")
+                            .patternLine("PSP")
                             .patternLine(" S ")
                             .patternLine(" R ")
                             .patternLine(" R ")
